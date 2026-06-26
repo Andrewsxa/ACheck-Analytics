@@ -34,8 +34,8 @@
   --text-secondary: #2d4a6e;
   --text-muted:     #6b8ba4;
 
-  --font-sans:    'DM Sans', system-ui, sans-serif;
-  --font-display: 'Syne', system-ui, sans-serif;
+  --font-sans:    'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
 
   --radius-sm:    8px;
   --radius-md:    16px;
