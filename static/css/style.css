@@ -458,7 +458,7 @@ p  { color: var(--text-secondary); }
   padding: 14px;
 }
 .kpi-label { font-size: 0.68rem; color: var(--text-muted); font-weight: 600; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
-.kpi-value { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; color: var(--navy); }
+.kpi-value { font-family: var(--font-sans); font-size: 1.45rem; font-weight: 700; color: var(--navy); font-feature-settings: "tnum" 1; letter-spacing: -0.02em; }
 .kpi-delta { font-size: 0.7rem; font-weight: 600; margin-top: 3px; }
 .kpi-up   { color: var(--green); }
 .kpi-down { color: var(--red); }
@@ -505,9 +505,11 @@ p  { color: var(--text-secondary); }
 }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 2.6rem;
   font-weight: 800;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.03em;
   color: #ffffff;
   line-height: 1;
   margin-bottom: 8px;
@@ -701,9 +703,11 @@ p  { color: var(--text-secondary); }
 }
 .package-price  { margin-bottom: 32px; }
 .price-amount {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 2.8rem;
   font-weight: 800;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.03em;
   color: var(--navy);
   line-height: 1;
 }
@@ -833,7 +837,7 @@ p  { color: var(--text-secondary); }
   padding-top: 20px;
   border-top: 1px solid var(--border);
 }
-.profile-stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+.profile-stat-num { font-family: var(--font-sans); font-size: 1.5rem; font-weight: 700; color: var(--navy); font-feature-settings: "tnum" 1; letter-spacing: -0.02em; }
 .profile-stat-lbl { font-size: 0.72rem; color: var(--text-muted); }
 .profile-stat-num.text-blue  { color: var(--blue-bright); }
 .profile-stat-num.text-gold  { color: var(--gold); }
@@ -881,9 +885,11 @@ p  { color: var(--text-secondary); }
 }
 .diff-item:hover { border-color: rgba(26,110,255,0.2); box-shadow: var(--shadow-card-hover); }
 .diff-num {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 2rem;
   font-weight: 800;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.02em;
   color: rgba(26,110,255,0.15);
   line-height: 1;
   flex-shrink: 0;
