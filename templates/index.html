@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}ACheck Analytics — Fractional Data & Analytics Leadership{% endblock %}
+{% block title %}Aurelian Group — Strategic Advisory, Data & Expert Leadership{% endblock %}
 
 {% block content %}
 
-<!-- ══════════════════════ HERO ══════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -11,22 +11,18 @@
       <div class="hero-content animate">
         <div class="hero-eyebrow">
           <span class="hero-eyebrow-dot"></span>
-          Fractional Data &amp; Analytics Director
+          Strategic Advisory &amp; Intelligence
         </div>
         <h1>
-          Turn Your Data<br>
-          Into <span class="gradient-text">Measurable Profit</span>
+          Expert Leadership for<br>
+          Companies Built to <span class="gradient-text">Last</span>
         </h1>
         <p class="hero-sub">
-          I help CEOs increase profit by finding hidden opportunities inside the systems they already own — without hiring a full-time analytics team.
+          Aurelian Group brings fractional executive leadership, data intelligence, and strategic advisory to growing companies — giving you the senior expertise you need, precisely when you need it.
         </p>
         <div class="hero-cta-row">
-          <a href="{{ url_for('services') }}" class="btn-primary">
-            View Packages &nbsp;&#8594;
-          </a>
-          <a href="{{ url_for('contact') }}" class="btn-outline">
-            Schedule a Call
-          </a>
+          <a href="{{ url_for('services') }}" class="btn-primary">Our Services &nbsp;&#8594;</a>
+          <a href="{{ url_for('contact') }}" class="btn-outline">Schedule a Call</a>
         </div>
         <div class="hero-trust">
           <div class="hero-trust-icons">
@@ -34,9 +30,9 @@
             <div class="hero-trust-icon">SQL</div>
             <div class="hero-trust-icon">Py</div>
             <div class="hero-trust-icon">R</div>
-            <div class="hero-trust-icon">TAB</div>
+            <div class="hero-trust-icon">AI</div>
           </div>
-          <span>Enterprise-grade analytics. No enterprise-sized team required.</span>
+          <span>Senior-level expertise. Delivered without the full-time overhead.</span>
         </div>
       </div>
 
@@ -93,44 +89,102 @@
   </div>
 </section>
 
-<!-- ══════════════════════ STATS STRIP ══════════════════════ -->
-<div class="divider"></div>
+<!-- STATS -->
 <section class="stats-strip">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item animate">
-        <div class="stat-number text-blue"><span class="counter" data-target="15" data-suffix="hrs">0hrs</span></div>
+        <div class="stat-number text-blue">15 hrs</div>
         <div class="stat-label">Avg. hours saved per week</div>
       </div>
       <div class="stat-item animate delay-1">
-        <div class="stat-number text-gold"><span class="counter" data-prefix="$" data-target="25000" data-suffix="">$0</span></div>
-        <div class="stat-label">Avg. monthly savings identified</div>
+        <div class="stat-number text-gold">$25K+</div>
+        <div class="stat-label">Monthly savings identified</div>
       </div>
       <div class="stat-item animate delay-2">
-        <div class="stat-number text-green"><span class="counter" data-target="30" data-suffix="%">0%</span></div>
+        <div class="stat-number text-green">30%</div>
         <div class="stat-label">Avg. reporting time reduction</div>
       </div>
       <div class="stat-item animate delay-3">
-        <div class="stat-number"><span class="counter" data-target="90" data-suffix=" days">0 days</span></div>
-        <div class="stat-label">From engagement to live dashboards</div>
+        <div class="stat-number">90 days</div>
+        <div class="stat-label">To live executive dashboards</div>
       </div>
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- ══════════════════════ IDEAL CLIENTS ══════════════════════ -->
+<!-- PRACTICE AREAS -->
+<section class="section" style="background: var(--bg-surface);">
+  <div class="container">
+    <div class="text-center animate">
+      <div class="section-label" style="margin: 0 auto 20px;">What We Do</div>
+      <h2 class="section-title">Nine Practice Areas.<br>One Trusted Partner.</h2>
+      <p class="section-sub" style="margin: 0 auto;">
+        From the boardroom to the database — Aurelian Group provides the leadership, intelligence, and execution your business needs to grow with confidence.
+      </p>
+    </div>
+    <div class="practice-grid animate delay-1">
+      <div class="practice-card">
+        <div class="practice-icon">&#128202;</div>
+        <h4>Data &amp; Analytics</h4>
+        <p>Executive dashboards, KPI frameworks, BI architecture, and governed reporting environments.</p>
+        <a href="{{ url_for('services') }}" class="practice-link">View packages &#8594;</a>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#129302;</div>
+        <h4>AI Consulting</h4>
+        <p>Practical AI strategy, model evaluation, and implementation roadmaps grounded in real business outcomes.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#128084;</div>
+        <h4>Fractional Executives</h4>
+        <p>Senior-level CTO, CDO, COO, and analytics leadership — engaged monthly, without the full-time cost.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#128736;</div>
+        <h4>Data Engineering</h4>
+        <p>Data pipelines, warehouse design, ETL architecture, and SQL optimization built for scale.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#128269;</div>
+        <h4>M&amp;A Due Diligence</h4>
+        <p>Technical and data due diligence for acquisitions — surface risk, validate claims, and accelerate integration.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#9881;</div>
+        <h4>Automation</h4>
+        <p>Eliminate manual work, connect disconnected systems, and build workflows that run without you.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#127919;</div>
+        <h4>Strategy</h4>
+        <p>Business intelligence strategy, technology roadmaps, and operating model design for growing companies.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#127775;</div>
+        <h4>Executive Coaching</h4>
+        <p>One-on-one coaching for executives navigating growth, transformation, and high-stakes decisions.</p>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon">&#128187;</div>
+        <h4>Software</h4>
+        <p>Custom internal tools, reporting applications, and data products built for your specific workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
 <section class="section">
   <div class="container">
     <div class="text-center animate">
-      <div class="section-label">Who I Serve</div>
-      <h2 class="section-title">You Have the Data.<br>I Help You Use It.</h2>
-      <p class="section-sub" style="margin: 0 auto;">
-        I work with businesses that are sitting on valuable data but haven't had the right person to turn it into profit.
+      <h2 class="section-title">You Have the Data. We Help You Use It.</h2>
+      <p class="section-sub" style="margin: 12px auto 0;">
+        We work with businesses sitting on valuable data and untapped potential — with no one internally to act on it.
       </p>
     </div>
 
-    <div class="clients-grid" style="margin-top: 20px;">
+    <div class="clients-grid" style="margin-top: 40px;">
       <div class="client-card animate delay-1">
         <div class="client-icon">&#128200;</div>
         <h4>Staffing Firms</h4>
@@ -139,12 +193,12 @@
       <div class="client-card animate delay-2">
         <div class="client-icon">&#127981;</div>
         <h4>Manufacturing</h4>
-        <p>ERP data, OEE, production costs, supply chain optimization</p>
+        <p>ERP data, OEE, production costs, supply chain visibility</p>
       </div>
       <div class="client-card animate delay-3">
         <div class="client-icon">&#128666;</div>
         <h4>Logistics</h4>
-        <p>Route efficiency, dispatch KPIs, fleet performance tracking</p>
+        <p>Route efficiency, dispatch KPIs, fleet performance</p>
       </div>
       <div class="client-card animate delay-4">
         <div class="client-icon">&#9881;</div>
@@ -154,12 +208,12 @@
       <div class="client-card animate delay-1">
         <div class="client-icon">&#127973;</div>
         <h4>Healthcare Groups</h4>
-        <p>Patient flow, billing analytics, staffing utilization metrics</p>
+        <p>Patient flow, billing analytics, staffing utilization</p>
       </div>
       <div class="client-card animate delay-2">
-        <div class="client-icon">&#128187;</div>
-        <h4>Professional Services</h4>
-        <p>Utilization rates, project profitability, pipeline forecasting</p>
+        <div class="client-icon">&#128084;</div>
+        <h4>PE-Backed Companies</h4>
+        <p>Post-acquisition reporting, EBITDA dashboards, investor metrics</p>
       </div>
       <div class="client-card animate delay-3">
         <div class="client-icon">&#128230;</div>
@@ -167,61 +221,54 @@
         <p>Inventory turns, vendor performance, fulfillment analytics</p>
       </div>
       <div class="client-card animate delay-4">
-        <div class="client-icon">&#128176;</div>
-        <h4>PE-Backed Companies</h4>
-        <p>Post-acquisition reporting, EBITDA dashboards, investor metrics</p>
+        <div class="client-icon">&#128187;</div>
+        <h4>Professional Services</h4>
+        <p>Utilization rates, project profitability, pipeline forecasting</p>
       </div>
     </div>
 
-    <!-- Company profile -->
-    <div class="cta-banner animate" style="margin-top: 64px;">
-      <div class="section-label" style="margin: 0 auto 20px;">Your Company Profile</div>
-      <h2>30–500 Employees. $5M–$100M Revenue.<br><span class="gradient-text-blue">Excel Everywhere. No Analytics Leader.</span></h2>
-      <p>If your team runs on spreadsheets, your executives can't see tomorrow, and you know there's money left on the table — I can fix that in 30 days.</p>
-      <div class="cta-btn-row" style="margin-top: 36px;">
-        <a href="{{ url_for('contact') }}" class="btn-gold">Get a Free Assessment &nbsp;&#8594;</a>
-        <a href="{{ url_for('services') }}" class="btn-outline">See Pricing</a>
+    <div style="margin-top: 56px; padding: 36px 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; box-shadow: var(--shadow-card);" class="animate">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 6px;">30–500 employees. $5M–$100M revenue. Built on hard work — ready for intelligent growth.</div>
+        <p style="font-size: 0.92rem; margin: 0;">If your executives can't see tomorrow and you know there's money being left on the table, we should talk.</p>
       </div>
+      <a href="{{ url_for('contact') }}" class="btn-gold" style="white-space: nowrap;">Get a Free Assessment &nbsp;&#8594;</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ HOW IT WORKS ══════════════════════ -->
-<div class="divider"></div>
+<!-- HOW IT WORKS -->
 <section class="section" style="background: var(--bg-surface);">
   <div class="container">
     <div class="text-center animate">
-      <div class="section-label">The Process</div>
-      <h2 class="section-title">From Messy Data to Clear Decisions</h2>
+      <h2 class="section-title">How an Engagement Works</h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative;">
-      <div style="position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--border), var(--blue-mid), var(--border)); z-index: 0;"></div>
+      <div style="position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--border), var(--blue-bright), var(--border)); z-index: 0;"></div>
       {% for step in [
-        ('01', '&#128269;', 'Discover', 'We audit your current systems, data sources, and pain points in one focused call.'),
-        ('02', '&#128200;', 'Assess', 'I map your data landscape and identify the highest-impact opportunities for your business.'),
-        ('03', '&#9881;', 'Build', 'Dashboards, automations, and governance frameworks are delivered on a defined timeline.'),
-        ('04', '&#128640;', 'Optimize', 'Ongoing support, forecasting, and strategy keep you ahead as your business grows.')
+        ('01', '&#128269;', 'Discover', 'We learn your business, your systems, and where the biggest leverage points are.'),
+        ('02', '&#128200;', 'Assess', 'We map the landscape and identify the highest-impact opportunities — ranked by ROI.'),
+        ('03', '&#9881;', 'Build', 'Dashboards, automations, and strategies delivered on a clear, defined timeline.'),
+        ('04', '&#128640;', 'Scale', 'Ongoing leadership, forecasting, and improvements as your business grows.')
       ] %}
       <div class="animate delay-{{ loop.index }}" style="text-align: center; padding: 0 24px; position: relative; z-index: 1;">
-        <div style="width: 72px; height: 72px; background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.6rem;">{{ step[1] | safe }}</div>
+        <div style="width: 72px; height: 72px; background: var(--bg-base); border: 2px solid var(--border); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.6rem; box-shadow: var(--shadow-card);">{{ step[1] | safe }}</div>
         <div style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; color: var(--blue-bright); margin-bottom: 8px;">{{ step[0] }}</div>
-        <h4 style="color: var(--text-primary); margin-bottom: 8px; font-size: 1rem;">{{ step[2] }}</h4>
+        <h4 style="color: var(--navy); margin-bottom: 8px; font-size: 1rem;">{{ step[2] }}</h4>
         <p style="font-size: 0.82rem; color: var(--text-muted);">{{ step[3] }}</p>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- ══════════════════════ TECH STACK ══════════════════════ -->
+<!-- TECH STACK -->
 <section class="section-sm">
   <div class="container text-center">
     <div class="animate">
-      <div class="section-label" style="margin: 0 auto 16px;">Technology Stack</div>
-      <p style="font-size: 0.95rem; color: var(--text-muted);">
-        I work inside the systems you already own — no rip-and-replace required.
-      </p>
+      <h3 style="color: var(--text-muted); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.04em; margin-bottom: 24px; font-family: var(--font-sans);">
+        We work inside the tools you already own &mdash; no rip-and-replace.
+      </h3>
     </div>
     <div class="tech-row animate delay-1">
       <span class="tech-badge"><span class="tech-dot dot-gold"></span> Power BI</span>
@@ -243,16 +290,15 @@
   </div>
 </section>
 
-<!-- ══════════════════════ FINAL CTA ══════════════════════ -->
+<!-- FINAL CTA -->
 <section class="section">
   <div class="container">
     <div class="cta-banner animate">
-      <div class="section-label" style="margin: 0 auto 20px;">Ready to Start?</div>
-      <h2>Stop Leaving Money in Your Spreadsheets</h2>
-      <p>Most businesses have 6–12 months of untapped revenue hiding in their data. Let's find yours — starting with a free 30-minute discovery call.</p>
+      <h2>Ready to build a business<br>that runs on intelligence?</h2>
+      <p>Free 30-minute discovery call. We'll identify your biggest opportunity and map out a path forward — no commitment, no pitch.</p>
       <div class="cta-btn-row">
-        <a href="{{ url_for('contact') }}" class="btn-primary">Schedule Free Discovery Call &nbsp;&#8594;</a>
-        <a href="{{ url_for('services') }}" class="btn-outline">View Packages &amp; Pricing</a>
+        <a href="{{ url_for('contact') }}" class="btn-primary">Schedule a Free Call &nbsp;&#8594;</a>
+        <a href="{{ url_for('services') }}" class="btn-outline">View Services</a>
       </div>
     </div>
   </div>

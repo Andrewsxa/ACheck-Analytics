@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}ACheck Analytics — Fractional Data & Analytics Leadership{% endblock %}</title>
+  <title>{% block title %}Aurelian Group — Strategic Advisory & Intelligence{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   {% block head %}{% endblock %}
 </head>
@@ -17,7 +17,7 @@
     <div class="nav-inner">
       <a href="{{ url_for('index') }}" class="nav-logo">
         <span class="logo-icon">&#9671;</span>
-        <span class="logo-text">ACheck <span class="logo-accent">Analytics</span></span>
+        <span class="logo-text">Aurelian <span class="logo-accent">Group</span></span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -53,86 +53,58 @@
       <div class="footer-brand">
         <a href="{{ url_for('index') }}" class="nav-logo">
           <span class="logo-icon">&#9671;</span>
-          <span class="logo-text">ACheck <span class="logo-accent">Analytics</span></span>
+          <span class="logo-text">Aurelian <span class="logo-accent">Group</span></span>
         </a>
-        <p class="footer-tagline">Turning data into decisions.<br>Turning decisions into profit.</p>
+        <p class="footer-tagline">Where strategy, intelligence, and execution converge — for businesses built to last.</p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
           <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('services') }}">Services &amp; Pricing</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
           <li><a href="{{ url_for('about') }}">About</a></li>
           <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
       </div>
       <div class="footer-services">
-        <h4>Core Services</h4>
+        <h4>Practice Areas</h4>
         <ul>
-          <li>Executive KPI Dashboards</li>
-          <li>BI Assessment &amp; Roadmap</li>
-          <li>Automation Audit</li>
-          <li>Fractional Analytics Director</li>
+          <li>Data &amp; Analytics</li>
+          <li>AI Consulting</li>
+          <li>Fractional Executives</li>
+          <li>Data Engineering</li>
+          <li>M&amp;A Due Diligence</li>
+          <li>Automation</li>
+          <li>Strategy</li>
+          <li>Executive Coaching</li>
+          <li>Software</li>
         </ul>
       </div>
       <div class="footer-contact">
         <h4>Get In Touch</h4>
-        <p>Ready to turn your data<br>into your competitive edge?</p>
+        <p>Ready to build something that lasts?</p>
         <a href="{{ url_for('contact') }}" class="btn-primary btn-sm">Schedule a Call</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 ACheck Analytics. All rights reserved.</p>
-      <p>Power BI &bull; SQL Server &bull; Microsoft Fabric &bull; Salesforce &bull; Bullhorn</p>
+      <p>&copy; 2024 Aurelian Group. All rights reserved.</p>
+      <p>Power BI &bull; SQL Server &bull; Python &bull; R &bull; Tableau &bull; Microsoft Fabric</p>
     </div>
   </footer>
 
   <script>
-    // Mobile nav toggle
     document.getElementById('navToggle').addEventListener('click', function() {
       document.getElementById('navLinks').classList.toggle('open');
       this.classList.toggle('active');
     });
 
-    // Intersection observer for fade-in animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-
-    // Counter animation
-    function animateCounter(el) {
-      const target = parseInt(el.getAttribute('data-target'));
-      const prefix = el.getAttribute('data-prefix') || '';
-      const suffix = el.getAttribute('data-suffix') || '';
-      const duration = 1800;
-      const step = target / (duration / 16);
-      let current = 0;
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-      }, 16);
-    }
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.animated) {
-          entry.target.dataset.animated = 'true';
-          animateCounter(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
   </script>
 </body>
 </html>

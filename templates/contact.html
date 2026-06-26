@@ -1,16 +1,15 @@
 {% extends "base.html" %}
-{% block title %}Contact — ACheck Analytics{% endblock %}
+{% block title %}Contact — Aurelian Group{% endblock %}
 
 {% block content %}
 
-<!-- ══════════════════════ HERO ══════════════════════ -->
 <section class="contact-hero">
   <div class="container">
     <div class="animate text-center" style="margin-bottom: 64px;">
       <div class="section-label" style="margin: 0 auto 20px;">Let's Talk</div>
       <h1>Start With a Free<br><span class="gradient-text">Discovery Call</span></h1>
       <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 520px; margin: 20px auto 0;">
-        Tell me about your business and biggest data challenge. I'll come back with 3 specific opportunities — no commitment, no sales pitch.
+        Tell us about your business and your biggest challenge. We'll come back with specific, actionable opportunities — no commitment, no sales pitch.
       </p>
     </div>
 
@@ -19,30 +18,28 @@
       <!-- Left: Info -->
       <div class="contact-info animate">
 
-        <div style="margin-bottom: 8px;">
-          <div class="section-label">What Happens Next</div>
-        </div>
+        <h4 style="color: var(--navy); margin-bottom: 20px; font-size: 0.95rem;">What happens after you submit</h4>
 
         <div class="contact-process">
           <div class="process-step">
             <div class="step-num">1</div>
             <div class="step-body">
               <h5>Submit Your Info</h5>
-              <p>Fill in the form with your business details and biggest data pain point.</p>
+              <p>Tell us about your business, your challenge, and which practice area interests you most.</p>
             </div>
           </div>
           <div class="process-step">
             <div class="step-num">2</div>
             <div class="step-body">
-              <h5>I Review Your Situation</h5>
-              <p>Within 24 hours I'll review your submission and do light research on your business.</p>
+              <h5>We Review Your Situation</h5>
+              <p>Within 24 hours we'll review your submission and do light research on your business.</p>
             </div>
           </div>
           <div class="process-step">
             <div class="step-num">3</div>
             <div class="step-body">
               <h5>30-Minute Discovery Call</h5>
-              <p>We talk through your current data situation and I share 3 specific opportunities I see.</p>
+              <p>We talk through your current situation and share two or three specific opportunities we see.</p>
             </div>
           </div>
           <div class="process-step">
@@ -54,11 +51,11 @@
           </div>
         </div>
 
-        <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 14px;">
 
           <div class="contact-item">
             <h4>Response Time</h4>
-            <p>All inquiries answered within 24 business hours. Usually much faster.</p>
+            <p>All inquiries answered within 24 business hours.</p>
           </div>
 
           <div class="contact-item">
@@ -68,16 +65,12 @@
 
           <div class="contact-item">
             <h4>LinkedIn</h4>
-            <p>
-              <a href="https://linkedin.com/in/andrewadamcheck" target="_blank" rel="noopener">
-                linkedin.com/in/andrewadamcheck &nbsp;&#8599;
-              </a>
-            </p>
+            <p><a href="https://linkedin.com/in/andrewadamcheck" target="_blank" rel="noopener">linkedin.com/in/andrewadamcheck &nbsp;&#8599;</a></p>
           </div>
 
-          <div class="contact-item" style="background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.2);">
+          <div class="contact-item" style="background: #fefce8; border-color: #fde68a;">
             <h4 style="color: var(--gold);">&#127775; No Obligation</h4>
-            <p>The discovery call is 100% free. If we're not a fit, I'll point you in the right direction anyway.</p>
+            <p>The discovery call is 100% free. If we're not a fit, we'll point you in the right direction anyway.</p>
           </div>
 
         </div>
@@ -86,8 +79,8 @@
       <!-- Right: Form -->
       <div class="animate delay-2">
         <div class="form-card">
-          <h3>Tell Me About Your Business</h3>
-          <p>The more context you share, the more specific I can be on our call.</p>
+          <h3>Tell Us About Your Business</h3>
+          <p>The more context you share, the more specific we can be on our call.</p>
 
           <form method="POST" action="{{ url_for('contact') }}">
             <div class="form-row">
@@ -108,7 +101,7 @@
               </div>
               <div class="form-group">
                 <label for="title">Your Title</label>
-                <input type="text" id="title" name="title" placeholder="CEO, COO, VP Ops..." />
+                <input type="text" id="title" name="title" placeholder="CEO, COO, VP Operations..." />
               </div>
             </div>
 
@@ -149,25 +142,38 @@
                 <option value="healthcare">Healthcare</option>
                 <option value="professional-services">Professional Services</option>
                 <option value="distribution">Distribution</option>
+                <option value="pe-backed">PE-Backed / M&amp;A</option>
                 <option value="other">Other</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="package">Service You're Interested In</label>
+              <label for="package">Practice Area of Interest</label>
               <select id="package" name="package">
-                <option value="" disabled selected>Select a service (optional)</option>
-                <option value="1">Package 1 — Executive KPI Dashboard ($3,000)</option>
-                <option value="2">Package 2 — BI Assessment ($2,500)</option>
-                <option value="3">Package 3 — Automation Audit ($5,000)</option>
-                <option value="4">Package 4 — Fractional Analytics Director ($2,500–$5,000/mo)</option>
+                <option value="" disabled selected>Select a practice area (optional)</option>
+                <optgroup label="— Data &amp; Analytics (Active) —">
+                  <option value="1">Executive KPI Dashboard ($3,000)</option>
+                  <option value="2">BI Assessment &amp; Roadmap ($2,500)</option>
+                  <option value="3">Automation Audit ($5,000)</option>
+                  <option value="4">Fractional Analytics Director ($2,500–$5,000/mo)</option>
+                </optgroup>
+                <optgroup label="— Launching 2025 —">
+                  <option value="ai">AI Consulting</option>
+                  <option value="fractional-exec">Fractional Executives</option>
+                  <option value="data-eng">Data Engineering</option>
+                  <option value="ma">M&amp;A Due Diligence</option>
+                  <option value="automation">Automation</option>
+                  <option value="strategy">Strategy</option>
+                  <option value="coaching">Executive Coaching</option>
+                  <option value="software">Software</option>
+                </optgroup>
                 <option value="unsure">Not sure yet — just want to talk</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">What's Your Biggest Data Challenge? *</label>
-              <textarea id="message" name="message" placeholder="Tell me what's not working. Spreadsheet chaos? No visibility into margins? Manual reports taking hours? The more specific, the better." required></textarea>
+              <label for="message">What's Your Biggest Challenge? *</label>
+              <textarea id="message" name="message" placeholder="Tell us what's not working. Spreadsheet chaos? No visibility into margins? Considering an acquisition? Executives making decisions without data? The more specific, the better." required></textarea>
             </div>
 
             <button type="submit" class="btn-primary form-submit">
@@ -181,7 +187,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════ CLOSING STRIP ══════════════════════ -->
 <div class="divider"></div>
 <section class="section-sm" style="background: var(--bg-surface);">
   <div class="container text-center animate">
