@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block title %}About — ACheck Analytics{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-hero-grid">
+
+      <div class="animate">
+        <div class="section-label">About ACheck Analytics</div>
+        <h1>We Speak<br><span class="gradient-text">Data and Business</span><br>Fluently.</h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 20px; max-width: 480px;">
+          ACheck Analytics was built on a simple premise: mid-market companies deserve the same analytics sophistication that Fortune 500 companies have — without the seven-figure budget.
+        </p>
+        <div class="about-quote">
+          "I help CEOs increase profit by finding hidden opportunities inside the systems they already own."
+        </div>
+        <div style="margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="{{ url_for('contact') }}" class="btn-primary">Work With Us &nbsp;&#8594;</a>
+          <a href="{{ url_for('services') }}" class="btn-outline">View Services</a>
+        </div>
+      </div>
+
+      <div class="animate delay-2">
+        <div class="about-profile">
+          <div class="profile-avatar">A</div>
+          <div class="profile-name">Andrew Adamcheck</div>
+          <div class="profile-title">Fractional Data &amp; Analytics Director</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Enterprise analytics leader with deep experience building executive reporting systems, governed BI environments, and data-driven cultures across staffing, manufacturing, logistics, and professional services.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+            {% for tag in ['Power BI', 'SQL Server', 'DAX', 'Azure Fabric', 'Bullhorn', 'Salesforce', 'Data Governance', 'Executive Reporting', 'Agile / Scrum', 'GitHub'] %}
+            <span style="font-size: 0.72rem; font-weight: 600; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.2); color: var(--blue-bright); padding: 4px 10px; border-radius: 4px;">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <div class="profile-stats">
+            <div>
+              <div class="profile-stat-num text-blue">10+</div>
+              <div class="profile-stat-lbl">Years in analytics</div>
+            </div>
+            <div>
+              <div class="profile-stat-num text-gold">50+</div>
+              <div class="profile-stat-lbl">Dashboards built</div>
+            </div>
+            <div>
+              <div class="profile-stat-num text-green">8</div>
+              <div class="profile-stat-lbl">Industries served</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ EXPERTISE ══════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="animate text-center" style="margin-bottom: 0;">
+      <div class="section-label">Core Expertise</div>
+      <h2>What Sets Us Apart from<br><span class="gradient-text-blue">Every Other Dashboard Builder</span></h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card animate delay-1">
+        <div class="expertise-icon">&#128202;</div>
+        <h4>Data Governance</h4>
+        <p>Row-level security, certified datasets, lineage tracking, and governed semantic models in Power BI and Fabric. Not just pretty charts.</p>
+      </div>
+      <div class="expertise-card animate delay-2">
+        <div class="expertise-icon">&#127775;</div>
+        <h4>KPI Architecture</h4>
+        <p>Design and implement KPI frameworks that align with business strategy — not just what's easy to pull from the database.</p>
+      </div>
+      <div class="expertise-card animate delay-3">
+        <div class="expertise-icon">&#128200;</div>
+        <h4>Executive Reporting</h4>
+        <p>Boardroom-ready dashboards and narratives that turn complex data into clear decisions for CEOs, CFOs, and COOs.</p>
+      </div>
+      <div class="expertise-card animate delay-1">
+        <div class="expertise-icon">&#128166;</div>
+        <h4>Forecasting &amp; Modeling</h4>
+        <p>Revenue forecasting, scenario modeling, and predictive trend analysis built directly into your BI environment.</p>
+      </div>
+      <div class="expertise-card animate delay-2">
+        <div class="expertise-icon">&#9881;</div>
+        <h4>SQL Optimization</h4>
+        <p>Query tuning, index strategy, stored procedure architecture, and data warehouse design for high-performance reporting.</p>
+      </div>
+      <div class="expertise-card animate delay-3">
+        <div class="expertise-icon">&#128101;</div>
+        <h4>Staffing Metrics</h4>
+        <p>ATS integration, fill rates, spread analysis, recruiter scorecards, and client profitability — the language of staffing, built in.</p>
+      </div>
+      <div class="expertise-card animate delay-1">
+        <div class="expertise-icon">&#128640;</div>
+        <h4>Power BI / Fabric Architecture</h4>
+        <p>Workspace governance, deployment pipelines, incremental refresh, composite models, and DirectQuery optimization.</p>
+      </div>
+      <div class="expertise-card animate delay-2">
+        <div class="expertise-icon">&#128190;</div>
+        <h4>GitHub &amp; Agile Delivery</h4>
+        <p>Version-controlled BI development, sprint-based delivery, and documentation standards you'd expect from an enterprise engineering team.</p>
+      </div>
+      <div class="expertise-card animate delay-3">
+        <div class="expertise-icon">&#128203;</div>
+        <h4>Vendor Selection</h4>
+        <p>Unbiased guidance on BI tools, data platforms, ETL solutions, and integration vendors — based on your use case, not commission.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ WHY FRACTIONAL ══════════════════════ -->
+<section class="section" style="background: var(--bg-surface);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+
+      <div class="animate">
+        <div class="section-label">Why Fractional?</div>
+        <h2>The Analytics Leader You Need.<br><span class="gradient-text-blue">Not the Overhead You Don't.</span></h2>
+        <p style="margin: 20px 0 32px; font-size: 1rem; color: var(--text-secondary);">
+          A full-time analytics director costs $150K–$220K per year — plus benefits, equity, and 6 months to hire. A fractional engagement gives you the same strategic leadership, activated in days, at a fraction of the cost.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--red); margin-bottom: 6px;">$180K+</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Full-time analytics director</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--green); margin-bottom: 6px;">$30–60K</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">ACheck Analytics retainer (annual)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="animate delay-2">
+        <div class="differentiator-list">
+          <div class="diff-item">
+            <div class="diff-num">01</div>
+            <div class="diff-body">
+              <h4>Activated in Days, Not Months</h4>
+              <p>No hiring process, no onboarding lag. We start delivering value in the first week.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-num">02</div>
+            <div class="diff-body">
+              <h4>Cancel-Anytime Flexibility</h4>
+              <p>Month-to-month retainers mean you're never locked in. Scale up or down as your business changes.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-num">03</div>
+            <div class="diff-body">
+              <h4>Breadth of Enterprise Experience</h4>
+              <p>One hire brings multi-industry perspective. We've seen what works — and what doesn't — across dozens of implementations.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-num">04</div>
+            <div class="diff-body">
+              <h4>Immediate Strategic Impact</h4>
+              <p>Not a junior analyst learning on the job. Day one you get senior-level thinking applied to your biggest problems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ INDUSTRIES ══════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="animate text-center" style="margin-bottom: 56px;">
+      <div class="section-label">Industries Served</div>
+      <h2>Deep Vertical Knowledge.<br><span class="gradient-text-blue">Not Generic Dashboards.</span></h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      {% for industry in [
+        ('&#128200;', 'Staffing &amp; Recruiting', 'Fill rates, spread, recruiter KPIs, ATS analytics, client profitability'),
+        ('&#127981;', 'Manufacturing', 'OEE, production costs, ERP reporting, quality metrics'),
+        ('&#128666;', 'Logistics', 'Fleet KPIs, dispatch efficiency, route optimization'),
+        ('&#9881;', 'HVAC &amp; Trades', 'Job costing, crew performance, multi-location P&amp;L'),
+        ('&#127984;', 'Construction', 'Project profitability, subcontractor tracking, WIP reporting'),
+        ('&#127973;', 'Healthcare', 'Patient flow, billing analytics, staffing utilization'),
+        ('&#128187;', 'Professional Services', 'Utilization, realization rates, pipeline, client profitability'),
+        ('&#128230;', 'Distribution', 'Inventory turns, vendor performance, fulfillment analytics')
+      ] %}
+      <div class="client-card animate delay-{{ (loop.index % 4) + 1 }}">
+        <div class="client-icon">{{ industry[0] | safe }}</div>
+        <h4>{{ industry[1] | safe }}</h4>
+        <p>{{ industry[2] | safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CTA ══════════════════════ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner animate">
+      <div class="section-label" style="margin: 0 auto 20px;">Let's Work Together</div>
+      <h2>Ready to Stop Guessing<br>and Start Knowing?</h2>
+      <p>Schedule a free 30-minute call. We'll identify your top data opportunity and map out exactly how to capture it.</p>
+      <div class="cta-btn-row">
+        <a href="{{ url_for('contact') }}" class="btn-primary">Book Free Discovery Call &nbsp;&#8594;</a>
+        <a href="{{ url_for('services') }}" class="btn-outline">View Packages &amp; Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

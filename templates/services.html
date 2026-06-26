@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block title %}Services & Pricing — ACheck Analytics{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="services-hero">
+  <div class="container">
+    <div class="animate">
+      <div class="section-label" style="margin: 0 auto 20px;">Services &amp; Pricing</div>
+      <h1>Don't Buy Dashboards.<br><span class="gradient-text">Buy Outcomes.</span></h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 580px; margin: 20px auto 0;">
+        Every engagement is scoped around a specific business problem — not a deliverable list. Here's what that looks like in practice.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PACKAGES ══════════════════════ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="packages-grid">
+
+      <!-- Package 1 -->
+      <div class="package-card animate delay-1">
+        <div class="package-num">Package 01</div>
+        <div class="package-name">Executive KPI Dashboard</div>
+        <div class="package-tagline">Give leadership the clarity to make faster, better decisions every single day.</div>
+        <div class="package-price">
+          <div class="price-amount text-blue">$3,000</div>
+          <div class="price-period">One-time project fee</div>
+        </div>
+        <div class="deliverables-label">What You Get</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> CEO summary dashboard — one-page view of the business</li>
+          <li><span class="check-icon">&#10003;</span> Sales performance &amp; pipeline dashboard</li>
+          <li><span class="check-icon">&#10003;</span> Profitability &amp; margin dashboard by division/line</li>
+          <li><span class="check-icon">&#10003;</span> Pipeline &amp; forecast dashboard</li>
+          <li><span class="check-icon">&#10003;</span> Mobile-optimized version for on-the-go access</li>
+          <li><span class="check-icon">&#10003;</span> 30-day post-launch support included</li>
+        </ul>
+        <a href="{{ url_for('contact') }}?package=1" class="btn-outline" style="width: 100%; justify-content: center;">Get Started &nbsp;&#8594;</a>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card animate delay-2">
+        <div class="package-num">Package 02</div>
+        <div class="package-name">Business Intelligence Assessment</div>
+        <div class="package-tagline">Know exactly where your data stands and what to fix first — with a clear roadmap.</div>
+        <div class="package-price">
+          <div class="price-amount text-blue">$2,500</div>
+          <div class="price-period">One-time assessment fee</div>
+        </div>
+        <div class="deliverables-label">What We Review</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> Existing reports, dashboards, and KPI definitions</li>
+          <li><span class="check-icon">&#10003;</span> SQL Server schemas, query performance &amp; data quality</li>
+          <li><span class="check-icon">&#10003;</span> Excel/spreadsheet dependencies and manual workflows</li>
+          <li><span class="check-icon">&#10003;</span> Data governance, security, and access controls</li>
+          <li><span class="check-icon">&#10003;</span> Current tech stack and integration gaps</li>
+        </ul>
+        <div class="deliverables-label" style="margin-top: 8px;">What You Receive</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> 25-page written roadmap with prioritized recommendations</li>
+          <li><span class="check-icon">&#10003;</span> Executive summary presentation (live walkthrough)</li>
+          <li><span class="check-icon">&#10003;</span> ROI estimate for each recommended initiative</li>
+        </ul>
+        <a href="{{ url_for('contact') }}?package=2" class="btn-outline" style="width: 100%; justify-content: center;">Get Started &nbsp;&#8594;</a>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card animate delay-3">
+        <div class="package-num">Package 03</div>
+        <div class="package-name">Automation Audit</div>
+        <div class="package-tagline">Find the manual work destroying your team's time and build a plan to eliminate it.</div>
+        <div class="package-price">
+          <div class="price-amount text-gold">$5,000</div>
+          <div class="price-period">One-time project fee</div>
+        </div>
+        <div class="deliverables-label">What We Hunt For</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> Manual reports that should be automated</li>
+          <li><span class="check-icon">&#10003;</span> Duplicate work across departments</li>
+          <li><span class="check-icon">&#10003;</span> Spreadsheet nightmares masquerading as processes</li>
+          <li><span class="check-icon">&#10003;</span> Copy-paste workflows between disconnected systems</li>
+          <li><span class="check-icon">&#10003;</span> Reporting bottlenecks holding back decisions</li>
+        </ul>
+        <div class="deliverables-label" style="margin-top: 8px;">Typical Result</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> 10–20 hours/week recovered per client</li>
+          <li><span class="check-icon">&#10003;</span> Full automation implementation roadmap</li>
+          <li><span class="check-icon">&#10003;</span> Power Automate / Azure Data Factory build specs</li>
+        </ul>
+        <a href="{{ url_for('contact') }}?package=3" class="btn-outline" style="width: 100%; justify-content: center;">Get Started &nbsp;&#8594;</a>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="package-card featured animate delay-4">
+        <div class="package-badge">Most Popular</div>
+        <div class="package-num">Package 04</div>
+        <div class="package-name">Fractional Analytics Director</div>
+        <div class="package-tagline">An embedded analytics leader on your team — without the $180K salary and full-time overhead.</div>
+        <div class="package-price">
+          <div class="price-amount" style="background: linear-gradient(135deg, var(--blue-bright), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$2,500–$5,000</div>
+          <div class="price-period">Per month — cancel anytime</div>
+        </div>
+        <div class="deliverables-label">What's Included Monthly</div>
+        <ul class="deliverables-list">
+          <li><span class="check-icon">&#10003;</span> Weekly executive check-in meeting</li>
+          <li><span class="check-icon">&#10003;</span> Ongoing dashboard improvements &amp; new builds</li>
+          <li><span class="check-icon">&#10003;</span> Analytics strategy &amp; quarterly roadmap</li>
+          <li><span class="check-icon">&#10003;</span> Revenue forecasting &amp; trend analysis</li>
+          <li><span class="check-icon">&#10003;</span> Data governance framework implementation</li>
+          <li><span class="check-icon">&#10003;</span> Vendor evaluation &amp; selection support</li>
+          <li><span class="check-icon">&#10003;</span> Power BI / Microsoft Fabric roadmap &amp; governance</li>
+          <li><span class="check-icon">&#10003;</span> Ad-hoc analysis requests (unlimited)</li>
+        </ul>
+        <a href="{{ url_for('contact') }}?package=4" class="btn-primary" style="width: 100%; justify-content: center;">Start the Conversation &nbsp;&#8594;</a>
+      </div>
+
+    </div><!-- /.packages-grid -->
+
+    <!-- Comparison note -->
+    <div style="margin-top: 56px; text-align: center;" class="animate">
+      <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+        Not sure which package fits? Most clients start with the <strong style="color: var(--text-secondary);">BI Assessment</strong> or an <strong style="color: var(--text-secondary);">Executive Dashboard</strong> and move to the retainer once they see the value. <a href="{{ url_for('contact') }}" style="color: var(--blue-bright);">Let's talk through your situation &#8594;</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ WHAT MAKES US DIFFERENT ══════════════════════ -->
+<section class="section" style="background: var(--bg-surface);">
+  <div class="container">
+    <div class="animate text-center" style="margin-bottom: 56px;">
+      <div class="section-label">Why ACheck Analytics</div>
+      <h2>Most Freelancers Build Reports.<br><span class="gradient-text-blue">We Build Competitive Advantages.</span></h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      {% for item in [
+        ('&#127919;', 'Enterprise Experience', 'We bring Fortune 500-grade analytics architecture to mid-market businesses at a fraction of the cost.'),
+        ('&#128200;', 'ROI-First Approach', 'Every engagement is tied to a measurable business outcome — not just a dashboard delivery.'),
+        ('&#128101;', 'Executive Communication', 'We translate data insights into language your CEO, CFO, and board can act on immediately.'),
+        ('&#9881;', 'No Rip-and-Replace', 'We work inside your existing tools — SQL Server, Salesforce, QuickBooks, Bullhorn, Microsoft 365.'),
+        ('&#128202;', 'Staffing Niche Expertise', 'Deep vertical knowledge in staffing analytics, ATS data, fill rates, margin tracking, and recruiter performance.'),
+        ('&#127775;', 'Agile Delivery', 'Dashboards and insights delivered in sprints — you see results in weeks, not quarters.')
+      ] %}
+      <div class="expertise-card animate delay-{{ loop.index }}">
+        <div class="expertise-icon">{{ item[0] | safe }}</div>
+        <h4>{{ item[1] }}</h4>
+        <p>{{ item[2] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ CTA ══════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner animate">
+      <div class="section-label" style="margin: 0 auto 20px;">Let's Build Something</div>
+      <h2>Your First Dashboard Could Pay<br>For Itself in 30 Days</h2>
+      <p>Not sure where to start? Tell me about your business and biggest data headache. I'll come back with 3 specific opportunities — no charge, no commitment.</p>
+      <div class="cta-btn-row">
+        <a href="{{ url_for('contact') }}" class="btn-primary">Get Free Opportunity Assessment &nbsp;&#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
