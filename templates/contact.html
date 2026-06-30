@@ -6,10 +6,10 @@
 <section class="contact-hero">
   <div class="container">
     <div class="animate text-center" style="margin-bottom: 64px;">
-      <div class="section-label" style="margin: 0 auto 20px;">Let's Talk</div>
-      <h1>Start With a Free<br><span class="gradient-text">Discovery Call</span></h1>
+      <div class="section-label" style="margin: 0 auto 20px;">Begin the Conversation</div>
+      <h1>Request a<br><span class="gradient-text">Consultation</span></h1>
       <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 520px; margin: 20px auto 0;">
-        Tell us about your business and your biggest challenge. We'll come back with specific, actionable opportunities — no commitment, no sales pitch.
+        Share the context of your business and your most pressing analytical challenges. We will respond within 24 hours with a structured assessment of where we believe we can create value.
       </p>
     </div>
 
@@ -18,35 +18,35 @@
       <!-- Left: Info -->
       <div class="contact-info animate">
 
-        <h4 style="color: var(--navy); margin-bottom: 20px; font-size: 0.95rem;">What happens after you submit</h4>
+        <h4 style="color: var(--navy); margin-bottom: 20px; font-family: var(--font-display); font-size: 1rem; font-weight: 600;">How we engage from here</h4>
 
         <div class="contact-process">
           <div class="process-step">
-            <div class="step-num">1</div>
+            <div class="step-num">I</div>
             <div class="step-body">
-              <h5>Submit Your Info</h5>
-              <p>Tell us about your business, your challenge, and which practice area interests you most.</p>
+              <h5>You Provide Context</h5>
+              <p>Share your business profile, current analytical infrastructure, and the strategic decisions your leadership team is struggling to make with confidence.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="step-num">2</div>
+            <div class="step-num">II</div>
             <div class="step-body">
-              <h5>We Review Your Situation</h5>
-              <p>Within 24 hours we'll review your submission and do light research on your business.</p>
+              <h5>We Conduct Preliminary Research</h5>
+              <p>Within 24 hours we will review your submission, research your business, and develop an initial hypothesis about where the highest-value opportunities lie.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="step-num">3</div>
+            <div class="step-num">III</div>
             <div class="step-body">
-              <h5>30-Minute Discovery Call</h5>
-              <p>We talk through your current situation and share two or three specific opportunities we see.</p>
+              <h5>Structured 30-Minute Consultation</h5>
+              <p>We share our preliminary findings, refine our understanding of your specific situation, and identify the engagement structure most likely to create durable value.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="step-num">4</div>
+            <div class="step-num">IV</div>
             <div class="step-body">
-              <h5>Clear Next Step</h5>
-              <p>Whether it's a scoped proposal or just advice — you leave with a clear, actionable path forward.</p>
+              <h5>A Clear Recommendation</h5>
+              <p>You receive a direct perspective on the opportunity, the appropriate engagement structure, and the expected value creation — with no ambiguity about next steps.</p>
             </div>
           </div>
         </div>
@@ -55,11 +55,11 @@
 
           <div class="contact-item">
             <h4>Response Time</h4>
-            <p>All inquiries answered within 24 business hours.</p>
+            <p>All inquiries receive a substantive response within 24 business hours.</p>
           </div>
 
           <div class="contact-item">
-            <h4>Email</h4>
+            <h4>Direct Contact</h4>
             <p><a href="mailto:andrew.adamcheck@gmail.com">andrew.adamcheck@gmail.com</a></p>
           </div>
 
@@ -68,9 +68,9 @@
             <p><a href="https://linkedin.com/in/andrewadamcheck" target="_blank" rel="noopener">linkedin.com/in/andrewadamcheck &nbsp;&#8599;</a></p>
           </div>
 
-          <div class="contact-item" style="background: #fefce8; border-color: #fde68a;">
-            <h4 style="color: var(--gold);">&#127775; No Obligation</h4>
-            <p>The discovery call is 100% free. If we're not a fit, we'll point you in the right direction anyway.</p>
+          <div class="contact-item" style="background: var(--gold-light); border-color: rgba(184,150,46,0.28);">
+            <h4 style="color: var(--navy);">&#9671; No Obligation</h4>
+            <p>The initial consultation is complimentary. If we are not the right fit for your situation, we will tell you directly — and point you toward the resources that are.</p>
           </div>
 
         </div>
@@ -79,8 +79,8 @@
       <!-- Right: Form -->
       <div class="animate delay-2">
         <div class="form-card">
-          <h3>Tell Us About Your Business</h3>
-          <p>The more context you share, the more specific we can be on our call.</p>
+          <h3>Share Your Context</h3>
+          <p>The greater the context you provide, the more precisely we can calibrate our initial assessment.</p>
 
           <form method="POST" action="{{ url_for('contact') }}">
             <div class="form-row">
@@ -96,12 +96,12 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="company">Company Name</label>
+                <label for="company">Organization</label>
                 <input type="text" id="company" name="company" placeholder="Acme Corp" />
               </div>
               <div class="form-group">
-                <label for="title">Your Title</label>
-                <input type="text" id="title" name="title" placeholder="CEO, COO, VP Operations..." />
+                <label for="title">Your Role</label>
+                <input type="text" id="title" name="title" placeholder="CEO, CFO, COO, VP Operations..." />
               </div>
             </div>
 
@@ -118,7 +118,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="employees">Employees</label>
+                <label for="employees">Headcount</label>
                 <select id="employees" name="employees">
                   <option value="" disabled selected>Select range</option>
                   <option value="1-30">1 – 30</option>
@@ -131,9 +131,9 @@
             </div>
 
             <div class="form-group">
-              <label for="industry">Industry</label>
+              <label for="industry">Sector</label>
               <select id="industry" name="industry">
-                <option value="" disabled selected>Select your industry</option>
+                <option value="" disabled selected>Select your sector</option>
                 <option value="staffing">Staffing &amp; Recruiting</option>
                 <option value="manufacturing">Manufacturing</option>
                 <option value="logistics">Logistics &amp; Transportation</option>
@@ -148,12 +148,12 @@
             </div>
 
             <div class="form-group">
-              <label for="package">Practice Area of Interest</label>
+              <label for="package">Area of Interest</label>
               <select id="package" name="package">
                 <option value="" disabled selected>Select a practice area (optional)</option>
-                <optgroup label="— Data &amp; Analytics (Active) —">
+                <optgroup label="— Data &amp; Analytics (Active Engagements) —">
                   <option value="1">Executive KPI Dashboard ($3,000)</option>
-                  <option value="2">BI Assessment &amp; Roadmap ($2,500)</option>
+                  <option value="2">BI Assessment &amp; Strategic Roadmap ($2,500)</option>
                   <option value="3">Automation Audit ($5,000)</option>
                   <option value="4">Fractional Analytics Director ($2,500–$5,000/mo)</option>
                 </optgroup>
@@ -167,17 +167,17 @@
                   <option value="coaching">Executive Coaching</option>
                   <option value="software">Software</option>
                 </optgroup>
-                <option value="unsure">Not sure yet — just want to talk</option>
+                <option value="unsure">Uncertain — seeking an initial assessment</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">What's Your Biggest Challenge? *</label>
-              <textarea id="message" name="message" placeholder="Tell us what's not working. Spreadsheet chaos? No visibility into margins? Considering an acquisition? Executives making decisions without data? The more specific, the better." required></textarea>
+              <label for="message">Describe Your Situation *</label>
+              <textarea id="message" name="message" placeholder="Please describe your current analytical infrastructure, the decisions your leadership team is struggling to make with confidence, and any specific initiatives you are considering. The more context you provide, the more useful our initial response will be." required></textarea>
             </div>
 
             <button type="submit" class="btn-primary form-submit">
-              Send My Information &nbsp;&#8594;
+              Submit for Review &nbsp;&#8594;
             </button>
           </form>
         </div>
@@ -190,8 +190,8 @@
 <div class="divider"></div>
 <section class="section-sm" style="background: var(--bg-surface);">
   <div class="container text-center animate">
-    <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
-      Based in Florida &bull; Serving clients nationwide &bull; Remote-first delivery &bull; Available for on-site engagements in the Southeast
+    <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; letter-spacing: 0.02em;">
+      Based in Florida &nbsp;&bull;&nbsp; Serving clients nationwide &nbsp;&bull;&nbsp; Remote-first delivery &nbsp;&bull;&nbsp; Available for on-site engagements throughout the Southeast
     </p>
   </div>
 </section>
