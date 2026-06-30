@@ -32,7 +32,7 @@
             Senior analytics executive and strategic advisor with a career building enterprise-grade reporting infrastructure, data governance frameworks, and intelligence-led cultures across staffing, manufacturing, logistics, and professional services.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-            {% for tag in ['Power BI', 'Microsoft Fabric', 'SQL Server', 'Python', 'R / RStudio', 'Tableau', 'DAX', 'Bullhorn', 'Salesforce', 'Data Governance', 'AI Strategy', 'Executive Reporting', 'M&A Analytics', 'Agile / Scrum', 'GitHub'] %}
+            {% for tag in ['Power BI', 'Microsoft Fabric', 'SQL Server', 'Python', 'R / RStudio', 'Tableau', 'DAX', 'Bullhorn', 'Salesforce', 'Data Governance', 'AI Strategy', 'Executive Reporting', 'Call Center Analytics', 'M&A Analytics', 'Agile / Scrum', 'GitHub'] %}
             <span style="font-size: 0.72rem; font-weight: 600; background: var(--gold-light); border: 1px solid rgba(184,150,46,0.22); color: var(--navy); padding: 4px 10px; border-radius: 2px;">{{ tag }}</span>
             {% endfor %}
           </div>
@@ -112,6 +112,11 @@
         <div class="expertise-icon">&#128203;</div>
         <h4>Technology Selection</h4>
         <p>Unbiased evaluation of BI platforms, data infrastructure, and ETL solutions — grounded in your specific operating context, with no vendor relationships that compromise the recommendation.</p>
+      </div>
+      <div class="expertise-card animate delay-1">
+        <div class="expertise-icon">&#128222;</div>
+        <h4>Call Center Analytics</h4>
+        <p>Agent performance, AHT, first-call resolution, queue analytics, CSAT, and workforce utilization — turning high-volume call center data into operational intelligence leadership can act on.</p>
       </div>
     </div>
   </div>
@@ -196,7 +201,8 @@
         ('&#127984;', 'Construction', 'Project profitability, subcontractor analytics, WIP reporting, cash forecasting'),
         ('&#127973;', 'Healthcare', 'Patient throughput, billing analytics, staffing utilization, capacity planning'),
         ('&#128187;', 'Professional Services', 'Utilization, realization rates, pipeline conversion, client profitability'),
-        ('&#128230;', 'Distribution', 'Inventory velocity, vendor performance, fulfillment analytics, demand forecasting')
+        ('&#128230;', 'Distribution', 'Inventory velocity, vendor performance, fulfillment analytics, demand forecasting'),
+        ('&#128222;', 'Call Centers', 'Agent performance, AHT, FCR, queue analytics, CSAT, workforce utilization')
       ] %}
       <div class="client-card animate delay-{{ (loop.index % 4) + 1 }}">
         <div class="client-icon">{{ industry[0] | safe }}</div>

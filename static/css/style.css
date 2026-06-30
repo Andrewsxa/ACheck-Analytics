@@ -559,6 +559,8 @@ p  { color: var(--text-secondary); }
   box-shadow: var(--shadow-card-hover);
 }
 .client-icon  { font-size: 2rem; margin-bottom: 12px; }
+/* Centre a lone orphan card in the last row of a 4-column grid */
+.clients-grid .client-card:last-child:nth-child(4n+1) { grid-column: 2 / 4; }
 .client-card h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 6px; }
 .client-card p  { font-size: 0.8rem; color: var(--text-muted); }
 
