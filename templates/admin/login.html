@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Aurelian Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f4efe4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(110,80,40,0.14);
+      border-top: 3px solid #b8962e;
+      border-radius: 4px;
+      padding: 48px 40px;
+      width: 360px;
+      box-shadow: 0 4px 24px rgba(22,14,6,0.08);
+    }
+    .logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0c1d32;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .logo span { color: #b8962e; }
+    .subtitle {
+      font-size: 0.78rem;
+      color: #7a6245;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(110,80,40,0.12);
+    }
+    label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #3a2c1a;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    input[type="password"] {
+      width: 100%;
+      background: #faf7f0;
+      border: 1.5px solid rgba(110,80,40,0.18);
+      border-radius: 3px;
+      padding: 11px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #18100a;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 20px;
+    }
+    input[type="password"]:focus { border-color: #b8962e; }
+    button {
+      width: 100%;
+      background: #0c1d32;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    button:hover { background: #152f52; }
+    .flash {
+      background: #fff5f5;
+      border: 1px solid #fca5a5;
+      color: #7a1c1c;
+      padding: 10px 14px;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Aurelian <span>Group</span></div>
+    <div class="subtitle">Administration</div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+    <form method="POST" action="{{ url_for('admin_login_post') }}">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autofocus required />
+      <button type="submit">Sign In &nbsp;&#8594;</button>
+    </form>
+  </div>
+</body>
+</html>

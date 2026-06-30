@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leads — Aurelian Group Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f4efe4;
+      color: #18100a;
+      min-height: 100vh;
+    }
+    /* Nav */
+    .nav {
+      background: #0c1d32;
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #b8962e;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #fff; }
+    .nav-logo span { color: #d4af37; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-right span { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+    .nav-right a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .nav-right a:hover { color: #d4af37; }
+
+    /* Content */
+    .main { max-width: 1300px; margin: 0 auto; padding: 40px 32px; }
+    .page-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(110,80,40,0.18);
+    }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #0c1d32; }
+    .page-header p { font-size: 0.85rem; color: #7a6245; margin-top: 4px; }
+    .badge {
+      background: #0c1d32;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+    }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 80px 40px;
+      background: #fff;
+      border: 1px solid rgba(110,80,40,0.14);
+      border-radius: 4px;
+    }
+    .empty h3 { font-family: 'Playfair Display', serif; color: #0c1d32; margin-bottom: 8px; }
+    .empty p { font-size: 0.88rem; color: #7a6245; }
+
+    /* Lead cards */
+    .leads-grid { display: grid; gap: 20px; }
+    .lead-card {
+      background: #fff;
+      border: 1px solid rgba(110,80,40,0.14);
+      border-left: 3px solid #b8962e;
+      border-radius: 4px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 12px rgba(22,14,6,0.05);
+    }
+    .lead-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(110,80,40,0.10);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .lead-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #0c1d32; }
+    .lead-email { font-size: 0.85rem; color: #b8962e; font-weight: 500; margin-top: 2px; }
+    .lead-email a { color: #b8962e; text-decoration: none; }
+    .lead-email a:hover { text-decoration: underline; }
+    .lead-time { font-size: 0.75rem; color: #7a6245; white-space: nowrap; letter-spacing: 0.04em; }
+
+    .lead-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px 24px;
+      margin-bottom: 20px;
+    }
+    .meta-item label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a6245;
+      margin-bottom: 3px;
+    }
+    .meta-item span {
+      font-size: 0.88rem;
+      color: #3a2c1a;
+      font-weight: 500;
+    }
+    .meta-item span.empty-val { color: #c5b08a; font-style: italic; font-weight: 400; }
+
+    .lead-message-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a6245;
+      margin-bottom: 8px;
+    }
+    .lead-message {
+      background: #faf7f0;
+      border: 1px solid rgba(110,80,40,0.12);
+      border-radius: 3px;
+      padding: 16px 18px;
+      font-size: 0.88rem;
+      color: #3a2c1a;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    /* Package pill */
+    .pkg-pill {
+      display: inline-block;
+      background: #f5edcf;
+      border: 1px solid rgba(184,150,46,0.28);
+      color: #0c1d32;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">Aurelian <span>Group</span></div>
+    <div class="nav-right">
+      <span>Administration</span>
+      <a href="{{ url_for('index') }}" target="_blank">View Site &#8599;</a>
+      <a href="{{ url_for('admin_logout') }}">Sign Out</a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div>
+        <h1>Consultation Requests</h1>
+        <p>All form submissions from the Aurelian Group website, newest first.</p>
+      </div>
+      <div class="badge">{{ leads|length }} total</div>
+    </div>
+
+    {% if not leads %}
+      <div class="empty">
+        <h3>No submissions yet</h3>
+        <p>Consultation requests will appear here once the contact form is submitted.</p>
+      </div>
+    {% else %}
+      <div class="leads-grid">
+        {% for lead in leads %}
+        <div class="lead-card">
+          <div class="lead-header">
+            <div>
+              <div class="lead-name">{{ lead.name }}</div>
+              <div class="lead-email"><a href="mailto:{{ lead.email }}">{{ lead.email }}</a></div>
+            </div>
+            <div class="lead-time">
+              {{ lead.submitted_at.strftime('%b %d, %Y') }}<br>
+              <span style="color:#c5b08a;">{{ lead.submitted_at.strftime('%I:%M %p') }} UTC</span>
+            </div>
+          </div>
+
+          <div class="lead-meta">
+            <div class="meta-item">
+              <label>Organization</label>
+              <span {% if not lead.company %}class="empty-val"{% endif %}>{{ lead.company or 'Not provided' }}</span>
+            </div>
+            <div class="meta-item">
+              <label>Role</label>
+              <span {% if not lead.title %}class="empty-val"{% endif %}>{{ lead.title or 'Not provided' }}</span>
+            </div>
+            <div class="meta-item">
+              <label>Revenue</label>
+              <span {% if not lead.revenue %}class="empty-val"{% endif %}>{{ lead.revenue or '—' }}</span>
+            </div>
+            <div class="meta-item">
+              <label>Headcount</label>
+              <span {% if not lead.employees %}class="empty-val"{% endif %}>{{ lead.employees or '—' }}</span>
+            </div>
+            <div class="meta-item">
+              <label>Sector</label>
+              <span {% if not lead.industry %}class="empty-val"{% endif %}>{{ lead.industry or '—' }}</span>
+            </div>
+            <div class="meta-item">
+              <label>Interest</label>
+              {% if lead.package %}
+                <span class="pkg-pill">{{ lead.package }}</span>
+              {% else %}
+                <span class="empty-val">—</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="lead-message-label">Message</div>
+          <div class="lead-message">{{ lead.message }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>
