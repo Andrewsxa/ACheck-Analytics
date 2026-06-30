@@ -175,7 +175,6 @@ p  { color: var(--text-secondary); }
   height: 54px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;  /* white PNG bg disappears into nav background */
 }
 
 /* Footer full wordmark — inverted to white on dark navy */
