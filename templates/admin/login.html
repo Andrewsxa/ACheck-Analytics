@@ -25,14 +25,8 @@
       width: 360px;
       box-shadow: 0 4px 24px rgba(22,14,6,0.08);
     }
-    .logo {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #0c1d32;
-      letter-spacing: 0.02em;
-      margin-bottom: 6px;
-    }
-    .logo span { color: #b8962e; }
+    .logo { margin-bottom: 6px; }
+    .logo img { height: 80px; width: auto; display: block; margin: 0 auto; }
     .subtitle {
       font-size: 0.78rem;
       color: #7a6245;
@@ -92,7 +86,7 @@
 </head>
 <body>
   <div class="card">
-    <div class="logo">Aurelian <span>Group</span></div>
+    <div class="logo"><img src="/static/images/logo-full.png" alt="Aurelian Group" /></div>
     <div class="subtitle">Administration</div>
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% for category, message in messages %}

@@ -24,8 +24,10 @@
       justify-content: space-between;
       border-bottom: 2px solid #b8962e;
     }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #fff; }
-    .nav-logo span { color: #d4af37; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #fff; }
+    .nav-logo-text span { color: #d4af37; }
     .nav-right { display: flex; align-items: center; gap: 24px; }
     .nav-right span { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
     .nav-right a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
@@ -148,7 +150,10 @@
 <body>
 
   <nav class="nav">
-    <div class="nav-logo">Aurelian <span>Group</span></div>
+    <div class="nav-logo">
+      <img src="/static/images/logo-mark.png" alt="" />
+      <span class="nav-logo-text">Aurelian <span>Group</span></span>
+    </div>
     <div class="nav-right">
       <span>Administration</span>
       <a href="{{ url_for('index') }}" target="_blank">View Site &#8599;</a>

@@ -16,7 +16,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="{{ url_for('index') }}" class="nav-logo">
-        <span class="logo-icon">&#9671;</span>
+        <img src="{{ url_for('static', filename='images/logo-mark.png') }}" alt="Aurelian Group" class="nav-logo-mark" />
         <span class="logo-text">Aurelian <span class="logo-accent">Group</span></span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -51,9 +51,8 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="{{ url_for('index') }}" class="nav-logo">
-          <span class="logo-icon">&#9671;</span>
-          <span class="logo-text">Aurelian <span class="logo-accent">Group</span></span>
+        <a href="{{ url_for('index') }}" class="nav-logo footer-logo-link">
+          <img src="{{ url_for('static', filename='images/logo-full.png') }}" alt="Aurelian Group" class="footer-logo-img" />
         </a>
         <p class="footer-tagline">Where strategy, intelligence, and execution converge — for businesses built to last.</p>
       </div>
